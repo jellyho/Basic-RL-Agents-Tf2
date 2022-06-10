@@ -4,4 +4,4 @@
 
 ## 2. Q LEARNING
 
-## 3. DQN
+## 3. DEEP SARSA
