@@ -98,7 +98,7 @@ for e in range(num_episode):
         next_state, reward, term, trunc, info = env.step(action)
         done = term or trunc
         next_state = np.reshape(next_state, [1, state_size])
-        score += reward
+        score += reward + 0.0025 * tf.math.cos(3 * state[0])
 
         loss, sigma = agent.train_model(state, action, reward, next_state, done)
         loss_list.append(loss)
